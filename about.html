@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+      <h1 class="logo">GCA</h1>
+      <button class="menu-toggle">☰</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html" class="cta">Contact</a>
+        <button id="darkModeToggle" class="dark-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+<section id="about-sections">
+  <h2>About Me</h2>
+  <div class="about-intro">
+    <p class="intro">
+      Hi, I'm <strong>Gil Christian Alamillo</strong> a motivated Computer Science Graduate and IT student with a strong foundation in information technology and software development. 
+      Experienced in frontend web development using HTML, CSS, and JavaScript, with hands-on training in creating responsive and user-friendly websites. 
+      Possesses strong problem-solving skills, adaptability, and a willingness to learn new technologies. 
+      Seeking an opportunity to apply technical knowledge and contribute to organizational success.
+    </p>
+    <p>
+      Beyond technical expertise, I am passionate about UI/UX design, accessibility, and creating interactive experiences that blend creativity with emotion. 
+      I thrive in collaborative environments, value continuous learning, and enjoy experimenting with modern frameworks and design systems.
+    </p>
+  </div>
+
+      <div class="modal-buttons">
+        <a href="Resume - Gil Christian Alamillo.pdf" download class="btn-download">⬇ Download Resume</a> 
+      </div>
+
+  <div class="cards">
+    <div class="about-card" data-modal="educationModal"><span class="icon">🎓</span> Education</div>
+    <div class="about-card" data-modal="passionModal"><span class="icon">❤️</span> Passion & Values</div>
+    <div class="about-card" data-modal="futuregoalsmodal"><span class="icon">🚀</span> Future Goals</div>
+    <div class="about-card" data-modal="personalModal"><span class="icon">🌟</span> Personal Touch</div>
+  </div>
+</section>
+
+<div id="educationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Education</h3>
+    <p><strong>Patros Technological College:</strong></p>
+    <p>Bachelor of Science in Information Technology (Expected 2026)</p>
+    <p>Certificate in Computer Science (2024)</p>
+    <p><strong> Certificate (NC2):</strong></p>
+    <a>Computer System Servicing (2024)</a>
+
+    <div class="modal-button">
+      <button class="back-btn" data-back="personalModal"> &#8592; </button> 
+      <button class="next-btn" data-next="passionModal"> &#8594;</button> 
+    </div>
+  </div>
+</div>
+
+<div id="passionModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Passion & Values</h3> 
+    <ul class="values-list">
+      <li>I specialize in blending technical mastery with creative storytelling, crafting polished, user-friendly systems that feel alive and meaningful.</li> 
+      <li>I’m meticulous about validation, maintainability, and error-proofing, always aiming for scalable solutions that stand the test of time.</li> 
+      <li>Beyond code, I value design that resonates emotionally, creating playful, interactive flows and heartfelt projects that connect with people on a deeper level.</li> 
+      <li>I thrive in collaborative environments, believing that diverse perspectives and strong communication lead to the most impactful results.</li> 
+      <li>I’m committed to lifelong learning exploring new frameworks, design trends, and technologies to keep my work fresh, relevant, and future-ready.</li> 
+      <li>Challenges excite me. I see obstacles as opportunities to innovate, adapt, and grow stronger both technically and creatively.</li> 
+      <li>Beyond building, I enjoy mentoring peers and sharing knowledge, helping others unlock their potential while strengthening my own understanding.</li> 
+      <li>Ultimately, I aim to create systems and experiences that not only function flawlessly but also make a positive impact, whether by improving accessibility, streamlining workflows, or sparking joy in everyday interactions.</li> 
+    </ul>
+
+    <div class="modal-button">
+      <button class="back-btn" data-back="educationModal"> &#8592; </button> 
+      <button class="next-btn" data-next="futuregoalsmodal"> &#8594;</button> 
+    </div>
+  </div>
+</div>
+
+<div id="futuregoalsmodal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Future Goals</h3>
+    <ul class="goals-list">
+      <li>My short term goal is to build a polished portfolio and land a web development role where I can apply my skills and creativity.</li>
+      <li>Long term, I aim to specialize in frontend and UX design, eventually growing into a developer who not only builds systems but also creates experiences that inspire and delight.</li>
+      <li>I plan to continuously expand my knowledge in modern frameworks and design systems, ensuring my skills stay relevant and future-ready.</li>
+      <li>I aspire to grow into a mentor and team leader, guiding peers while fostering collaborative environments that spark innovation.</li>
+      <li>I aim to champion accessibility and inclusivity in design, building systems that empower all users regardless of background or ability.</li>
+      <li>I want to experiment with emerging technologies like AI-driven interfaces and immersive web experiences, pushing the boundaries of what’s possible.</li>
+      <li>My long term vision is to contribute to high-impact projects, eventually leading design initiatives that inspire and delight on a global scale.</li>
+    </ul>
+
+    <div class="modal-button">
+      <button class="back-btn" data-back="passionModal"> &#8592; </button> 
+      <button class="next-btn" data-next="personalModal"> &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<div id="personalModal" class="modal"> 
+  <div class="modal-content"> 
+    <span class="close">&times;</span> 
+    <h3>Personal Touch</h3> 
+    <p>
+      Beyond professional work, I enjoy building projects that blend creativity with emotion. I see technology not just as tools, but as bridges to meaningful experiences. 
+      My personal projects often include playful interactions, heartfelt designs, and features that surprise and delight users because I believe code can carry emotion as much as function.
+    </p> 
+    <ul> 
+      <li><strong>Community & Collaboration:</strong> Sharing knowledge and collaborating with peers to spark creativity and growth.</li> 
+      <li><strong>Experimentation & Playfulness:</strong> Exploring new frameworks and playful mini projects to discover fresh ways of delighting users.</li> 
+      <li><strong>Storytelling through Design:</strong> Treating every interface as a narrative that blends visuals, interactions, and emotions.</li> 
+      <li><strong>Passion for Accessibility:</strong> Ensuring inclusivity and usability in all personal projects.</li> 
+      <li><strong>Future-oriented mindset:</strong> Exploring AI-driven and immersive web experiences to bring emotion into future design.</li> 
+    </ul>
+
+    <div class="modal-button"> 
+      <button class="back-btn" data-back="futuregoalsmodal"> &#8592; </button> 
+      <button class="next-btn" data-next="educationModal"> &#8594;</button>
+    </div> 
+  </div>
+</div>
+
+<div class="motto-section">
+  <blockquote>
+    “Slow progress is still progress in programming.”
+  </blockquote>
+</div>
+
+<div class="gallery-section">
+  <h3>Beyond Work</h3>
+  <p>Some of my hobbies and creative projects:</p>
+  
+  <div class="gallery-carousel">
+    <img src="Biking adventure.jpg" alt="Biking adventure" onclick="openLightbox(this)">
+    <img src="Barangay Portal Praject.png" alt="Barangay Portal Project" onclick="openLightbox(this)">
+    <img src="Travel experience.jpg" alt="Travel experience" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded view">
+</div>
+
+
+<script src="navbar.js"></script>
+<script src="about.js"></script>
+
+</body>
+</html>

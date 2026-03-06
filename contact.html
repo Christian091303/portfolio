@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">GCA</h1>
+      <button class="menu-toggle">☰</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <button id="darkModeToggle" class="dark-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="contact-page">
+
+  <h1>Contact Us</h1>
+  <p class="intro">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-info">
+
+      <div class="info-block delay1">
+        <h3>📍 Address</h3>
+        <p>Padil Pitogo Residences Phase 1<br>
+        Bambang ni Felix St, Taguig, Metro Manila</p>
+      </div>
+
+      <div class="info-block delay2">
+        <h3>📞 Phone</h3>
+        <p>09911450129 (DITO)<br>
+        09602820615 (Smart)</p>
+      </div>
+
+      <div class="info-block delay3">
+        <h3>✉ Email</h3>
+        <p>gilchristian.alamillo13@email.com</p>
+      </div>
+
+    </div>
+
+  <form class="contact-form" id="contactForm">
+
+    <h2>Send Message</h2>
+
+    <input type="text" id="name" name="user_name" placeholder="Your Name" required>
+
+    <input type="email" id="email" name="user_email" placeholder="Your Email" required>
+
+    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <div id="form-status"></div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/gcb_chan/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/gilchristian.2003/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://linkedin.com/in/gil-christian-alamillo-b84a0a2bb" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Christian091303" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+  </form>
+
+</div>
+
+</section>
+
+  <script src="navbar.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  emailjs.init("cGpYNuwvEP3Au-F0a");
+
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    emailjs.sendForm("service_christian", "template_tu9isgr", "#contactForm")
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        document.getElementById("form-status").innerHTML = "✅ Message sent successfully!";
+        form.reset();
+      }, function(error) {
+        console.log("FAILED...", error);
+        document.getElementById("form-status").innerHTML = "❌ Failed to send message. Please try again.";
+      });
+  });
+});
+
+  </script>
+</body>
+</html>
