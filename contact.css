@@ -294,7 +294,7 @@ body.dark-mode .logo {
 }
 
 .social-links a:hover {
-  transform: translateY(-3px); 
+   transform: translateY(-25px);  
 }
 
 body.dark-mode .social-links a {
@@ -305,7 +305,7 @@ body.dark-mode .social-links a {
 }
 
 body.dark-mode .social-links a:hover {
-  transform: translateY(-3px); 
+   transform: translateY(-25px); 
 }
 
 #form-status {
