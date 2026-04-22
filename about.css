@@ -174,7 +174,7 @@ body.dark-mode .dark-btn {
   border: 3px solid transparent;
   background-clip: padding-box;
   position: relative;
-  color: #000; 
+  color: #000000; 
 }
 
 .about-card::before {
@@ -182,7 +182,7 @@ body.dark-mode .dark-btn {
   position: absolute;
   top: -2px; left: -2px; right: -2px; bottom: -2px;
   border-radius: 14px;
-  background: linear-gradient(270deg, #000000, #444444, #888888, #ffffff);
+  background: linear-gradient(270deg, #252525, #444444, #888888, #ffffff);
   background-size: 600% 600%;
   z-index: -1;
   opacity: 0;
@@ -197,7 +197,7 @@ body.dark-mode .dark-btn {
 .about-card:hover {
   transform: rotateY(5deg) translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  color: #000; 
+  color: #000000; 
   text-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 
@@ -246,7 +246,7 @@ body.dark-mode .about-card:hover {
 #about-sections {
   padding: 100px 40px 60px;
   text-align: center;
-  background: linear-gradient(-45deg, #616060, #aaa9a9, #d3d1d1, #ffffff);
+  background: linear-gradient(-45deg, #7e7e7e, #aaa9a9, #d3d1d1, #ffffff);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
 }
@@ -676,29 +676,36 @@ body.dark-mode .next-btn:hover {
 
 .gallery-section {
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .gallery-section h3 {
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   color: #000000;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .gallery-section p {
   font-size: 1.5rem;
-  margin-bottom: 25px;
+  margin-bottom: 55px;
   color: #000000;
 }
 
-.gallery-carousel {
-  display: flex; 
-  gap: 40px; 
-  justify-content: center; 
-  flex-wrap: wrap;
+.certification {
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;  
+  gap: 100px;                 
+  flex-wrap: wrap;     
+  padding-bottom: 40px;         
 }
 
-.gallery-carousel img {
+.cert-item {
+  width: 280px;             
+  text-align: center;   
+}
+
+.certification img {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -708,22 +715,40 @@ body.dark-mode .next-btn:hover {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.gallery-carousel img:hover {
+.cert-info {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #000000;
+  padding-top: 20px;
+}
+
+.cert-info strong {
+  display: block;
+  font-size: 20px;
+  color: #000000;
+}
+
+.cert-info em {
+  display: block;
+  font-style: normal;
+  font-size: 19px;
+  color: #000000;
+}
+
+.cert-info span {
+  font-size: 16px;
+  color: #000000;
+}
+
+.certification img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-.motto-section {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.motto-section blockquote {
-  font-size: 1.9rem;
-  font-style: italic;
-  color: #000000; 
-  animation: fadeIn 2s ease-in-out;
-  text-shadow: 0 0 8px rgba(0,0,0,0.2);
+body.dark-mode .cert-info strong,
+body.dark-mode .cert-info em,
+body.dark-mode .cert-info span {
+  color: #ffffff;
 }
 
 body.dark-mode .gallery-section h3,
@@ -731,18 +756,13 @@ body.dark-mode .gallery-section p {
   color: #ffffff;
 }
 
-body.dark-mode .gallery-carousel img {
+body.dark-mode .certification img {
   border: 3px solid #444444; 
   box-shadow: 0 5px 30px rgba(255, 255, 255, 0.5);
 }
 
-body.dark-mode .gallery-carousel img:hover {
+body.dark-mode .certification img:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
-}
-
-body.dark-mode .motto-section blockquote {
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
 @keyframes fadeIn {
