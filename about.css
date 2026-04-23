@@ -718,7 +718,7 @@ body.dark-mode .next-btn:hover {
 
 .certification img {
   width: 250px;
-  height: 250px;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
