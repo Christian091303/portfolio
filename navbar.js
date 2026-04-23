@@ -2,20 +2,17 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
 
-  if (savedTheme === "dark") {
-    body.classList.add("dark-mode");
-  } else {
-    // Default lagi sa light mode kapag open/reload
-    body.classList.remove("dark-mode");
-    localStorage.setItem("theme", "light");
-  }
+  localStorage.removeItem("theme");
+
+  // Force default light mode
+  body.classList.remove("dark-mode");
 });
 
 if (darkModeToggle) {
   darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
+
     localStorage.setItem("theme", body.classList.contains('dark-mode') ? "dark" : "light");
   });
 }
