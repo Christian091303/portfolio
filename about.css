@@ -803,13 +803,13 @@ body.dark-mode .certification img:hover {
   object-fit: contain;
 }
 
-.lightbox .close {
-  position: fixed;
-  top: 20px; right: 30px;
-  font-size: 2rem;
-  color: #ffffff;
-  cursor: pointer;
-   z-index: 10000;
+.lightbox .close { 
+  position: absolute; 
+  top: 20px; 
+  right: 30px; 
+  font-size: 2rem; 
+  color: #fff; 
+  cursor: pointer; 
 }
 
 body.dark-mode .lightbox {
