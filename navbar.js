@@ -2,7 +2,6 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Force default light mode tuwing open/reload
   body.classList.remove("dark-mode");
 });
 
