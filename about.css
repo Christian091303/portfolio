@@ -266,24 +266,25 @@ body.dark-mode #about-sections {
 #about-sections h2 {
   color: #000000;
   font-size: 2.9rem;
+  margin-bottom: 25px;
+  margin-top: auto;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-bottom: 20px;
 }
 
 .intro {
   color: #000000;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .about-intro p {
   color: #000000;
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  font-size: 1.3rem;
-  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.9;
 }
 
 body.dark-mode #about-sections h2 {
@@ -678,24 +679,34 @@ body.dark-mode .next-btn:hover {
   text-align: center;
 }
 
+.gallery-section h2 {
+  font-size: 2.9rem;
+  margin-bottom: 20px;  
+  color: #000000;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .gallery-section h3 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.0rem;
+  margin-top: 10px;     
+  margin-bottom: 10px; 
   color: #000000;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .gallery-section p {
   font-size: 1.5rem;
-  margin-bottom: 55px;
+  margin-bottom: 35px;   
+  line-height: 1.5;     
   color: #000000;
 }
+
 
 .certification {
   display: flex;
   justify-content: center;  
   align-items: flex-start;  
-  gap: 100px;                 
+  gap: 75px;                 
   flex-wrap: wrap;     
   padding-bottom: 40px;         
 }
@@ -710,7 +721,6 @@ body.dark-mode .next-btn:hover {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #5f5d5d; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -736,7 +746,7 @@ body.dark-mode .next-btn:hover {
 }
 
 .cert-info span {
-  font-size: 16px;
+  font-size: 18px;
   color: #000000;
 }
 
@@ -751,7 +761,7 @@ body.dark-mode .cert-info span {
   color: #ffffff;
 }
 
-body.dark-mode .gallery-section h3,
+body.dark-mode .gallery-section h2,
 body.dark-mode .gallery-section p {
   color: #ffffff;
 }
