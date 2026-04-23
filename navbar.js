@@ -2,18 +2,13 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  localStorage.removeItem("theme");
-
-  // Force default light mode
+  // Force default light mode tuwing open/reload
   body.classList.remove("dark-mode");
 });
 
 if (darkModeToggle) {
   darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-
-    localStorage.setItem("theme", body.classList.contains('dark-mode') ? "dark" : "light");
   });
 }
 
