@@ -1,12 +1,29 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
-
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // ✅ SESSION STORAGE (instead of localStorage)
+  const savedTheme = sessionStorage.getItem("theme");
+
   if (savedTheme === "dark") {
     body.classList.add("dark-mode");
+  } else {
+    body.classList.remove("dark-mode"); // default light
   }
 
+  // ✅ DARK MODE TOGGLE
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      sessionStorage.setItem(
+        "theme",
+        body.classList.contains('dark-mode') ? "dark" : "light"
+      );
+    });
+  }
+
+  // ✅ BURGER MENU
   const burger = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('header nav');
 
@@ -22,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ✅ MODAL
   const resumeBtn = document.getElementById("resumeBtn");
   const modal = document.getElementById("resumeModal");
   const closeBtn = document.querySelector(".close-btn");
@@ -30,30 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
     resumeBtn.addEventListener("click", function(e){
       e.preventDefault();
       modal.classList.add("active");
-      document.body.classList.add("modal-open");
+      body.classList.add("modal-open");
     });
 
     closeBtn.addEventListener("click", function(){
       modal.classList.remove("active");
-      document.body.classList.remove("modal-open");
+      body.classList.remove("modal-open");
     });
 
     window.addEventListener("click", function(e){
       if(e.target === modal){
         modal.classList.remove("active");
-        document.body.classList.remove("modal-open");
+        body.classList.remove("modal-open");
       }
     });
   }
 });
-
-if (darkModeToggle) {
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
-  });
-}
