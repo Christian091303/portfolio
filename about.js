@@ -1,18 +1,13 @@
 function openLightbox(imgElement) {
+  if (window.innerWidth <= 768) {
+    return;
+  }
+
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   lightbox.style.display = "flex";
   lightboxImg.src = imgElement.src;
 }
-
-document.querySelectorAll(".close").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lightbox = btn.closest(".lightbox");
-    if (lightbox) {
-      lightbox.style.display = "none";
-    }
-  });
-});
 
 document.getElementById("lightbox").addEventListener("click", e => {
   if (e.target.id === "lightbox") {
